@@ -48,6 +48,13 @@ nav {
   color: #D4B896;
 }
 
+
+.page {
+  margin: 0 auto;
+  padding: 64px 32px 96px;
+}
+
+
 /* ── Page Heading ────────────────────────── */
 .page-heading {
   border-bottom: 1px solid #E8E2DA;
