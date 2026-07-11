@@ -52,3 +52,46 @@ function displayPets() {
 }
  
 document.addEventListener("DOMContentLoaded", displayPets);
+
+
+
+
+// === Object Constuctor === //
+function Pet(petName, petAge, petBreed, petGender, petService){
+    this.name = petName;
+    this.age = petAge;
+    this.breed = petBreed;
+    this.gender = petGender;
+    this.service = petService;
+}
+
+function registerPet() {
+    event.preventDefault();
+
+    let petName = document.getElementById("petName").value;
+    let petAge = document.getElementById("petAge").value;
+    let petBreed = document.getElementById("petBreed").value;
+    let petGender = document.getElementById("petGender").value;
+    let petService = document.getElementById("petService").value;
+
+
+    //b 1. Print the student object in the console
+    let newPet = new Pet(petName, petAge, petBreed, petGender, petService);
+    console.log(newPet);
+
+    //c. Use the object to display the new pet in the table
+    const body = document.getElementById("body");
+
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+    <td>${newPet.name}</td>
+    <td>${newPet.age}</td>
+    <td>${newPet.breed}</td>
+    <td>${newPet.gender}</td>
+    <td>${newPet.service}</td>
+    <td><button class="btn btn-danger">Delete</button></td>
+    `;
+
+    body.appendChild(row);
+}

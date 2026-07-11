@@ -32,39 +32,37 @@
  
     <div id="pets-display"></div>
 
-
-
     <!-- Create the Form-->
- <h2 class="mb-3">Product Registration</h2>
+ <h2 class="mb-3">Pet Registration</h2>
  <form class="p-5 border m-1 rounded bg-light">
 
     <div class="mb-3">
         <label class="form-label">Name</label>
-        <input class="form-control" type="text" name="" id="productName" placeholder="Rusty">
+        <input class="form-control" type="text" name="" placeholder="Rusty" id="petName">
     </div>
 
     <div class="mb-3">
         <label class="form-label">Age</label>
-        <input class="form-control" type="number" id="productPrice" placeholder="12">
+        <input class="form-control" type="number" placeholder="12" id="petAge" >
     </div>
 
     <div class="mb-3">
         <label class="form-label">Breed</label>
-        <input class="form-control" type="text" name="" id="productName" placeholder="Yorki">
+        <input class="form-control" type="text" name="" id="petBreed" >
     </div>
 
     <div class="mb-3">
         <label class="form-label">Gender</label>
-        <select class="form-select" type="number" id="productCategory">
+        <select class="form-select" type="number" placeholder="Yorki" id="petGender">
                 <option value="">Select Gender</option>
-                <option value="female">Female</option>
-                <option value="male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
         </select>
     </div>
 
         <div class="mb-3">
         <label class="form-label">Service</label>
-        <select class="form-select" type="number" id="productCategory">
+        <select class="form-select" type="number" id="petService">
                 <option value="">Select Service</option>
                 <option value="Grooming">Grooming</option>
                 <option value="Bathing">Bathing</option>
@@ -72,14 +70,46 @@
     </div>
 
 <div class="d-flex justify-content-end gap-3">
-    <button onclick="registerProduct(event)" class="btn btn-primary" type="submit">Submit</button>
+    <button onclick="registerPet()" class="btn btn-primary" type="submit">Submit</button>
     <button class="btn btn-secondary" type="reset">Reset</button>
 
 </div>
 
 </form>
 
- 
-  <script src="scripts/registration.js"></script>
+
+<!-- Table-->
+<section class="m-3">
+
+    <h2 class="mb-3">Pet List</h2>
+<table class="table p-5 border mb-1 rounded table-light  ">
+    
+    <!-- Headers -->
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Breed</th>
+        <th>Gender</th>
+        <th>Service</th>
+        <th>Delete</th>
+    </tr>
+
+    <!-- Body -->
+    <tbody class="table-group-divider" id="body">
+        <tr>
+            <td>Rusty</td>
+            <td>12</td>
+            <td>Mixed</td>
+            <td>Male</td>
+            <td>Grooming</td>
+            <td> <button class="btn btn-danger"> Delete </button> </td>
+        </tr>
+
+    </tbody>
+
+</table>
+</section>
+
+<script src="scripts/registration.js"></script>
 </body>
 </html>
