@@ -20,3 +20,5 @@ function displaySalonInfo() {
 }
  
 document.addEventListener("DOMContentLoaded", displaySalonInfo);
+
+$("#servicesForm").submit();

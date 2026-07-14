@@ -1,0 +1,4 @@
+
+$("#servicesForm").submit(function(){
+    alert();
+});
