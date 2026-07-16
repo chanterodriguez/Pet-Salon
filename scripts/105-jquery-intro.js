@@ -51,3 +51,8 @@ $("#addCSSButton").click(function(){
     .css("border", "solid 2px green")
     .css ("padding", "20px");
 });
+
+// 6. Function to add a CSS class to the paragraph
+$("#applyCSSClassButton").click(function() {
+ $("p").addClass("my-class");
+});
