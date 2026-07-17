@@ -56,3 +56,4 @@ $("#addCSSButton").click(function(){
 $("#applyCSSClassButton").click(function() {
  $("p").addClass("my-class");
 });
+

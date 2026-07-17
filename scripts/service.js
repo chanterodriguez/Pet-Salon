@@ -25,5 +25,21 @@ if (serviceName  == "" || serviceDescription == "" || servicePrice == "") {
     .css("border", "");
 }
 
+});
 
+$("#changeModeButton").click(function(){
+     $("body").toggleClass("dark-mode");
+
+ // Ask i teh body had teh dark-mode class
+ const isDark = $("body").hasClass("dark-mode");
+
+ //Change teh button text
+ // if it is dark -> show the sun
+ // if it is light -> show the mood
+
+ if(isDark){
+    $("#changeModeButton").text(" ☀️ Change Mode");
+ } else {
+    $("#changeModeButton").text(" 🌙 Change Mode");
+ }
 });
